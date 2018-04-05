@@ -63,6 +63,12 @@ public class HorizontalRuler extends RelativeLayout {
         init(context, attrs, defStyle);
     }
 
+    /**
+     * Initial settings of the ruler
+     * @param context
+     * @param attrs
+     * @param defStyle
+     */
     private void init(Context context, AttributeSet attrs, int defStyle) {
         this.context = context;
 
@@ -93,6 +99,9 @@ public class HorizontalRuler extends RelativeLayout {
         });
     }
 
+    /**
+     * Updates the centered value in order to not to lose track of it
+     */
     private void updateCenteredElement(){
         int firstVisible = layoutManager.findFirstVisibleItemPosition();
         int lastVisible = layoutManager.findLastVisibleItemPosition();
